@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --Family-Montserrat: "Montserrat", sans-serif; /* Weights: 500, 700 */
+  --Family-Fraunces: "Fraunces", serif; /* - Weights: 700 */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--Family-Montserrat);
+}
+body {
+  font-size: 14px;
+  background-color: var(--Cream);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 20px 15px;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img img {
+  width: 100%;
+}
+.card-body {
+  width: 50%;
+  background-color: var(--White);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.head {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 0.8rem;
+}
+.card-body h4 {
+  font-family: var(--Family-Fraunces);
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--Very-dark-blue);
+  margin: 15px 0;
+}
+.card-body p {
+  line-height: 1.5rem;
+  margin-bottom:15px ;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+.price span {
+  font-family: var(--Family-Fraunces);
+  color: var(--Dark-cyan);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.price p {
+  margin-left: 30px;
+  text-decoration: line-through;
+}
+.icon-car {
+  content: url("./images/icon-cart.svg");
+  margin-right: 10px;
+  vertical-align: middle;
+}
+button {
+  background-color: var(--Dark-cyan);
+  border: none;
+  color: var(--White);
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top:15px ;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 15px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 767px) {
+  .card-img,
+  .card-body {
+    width: 100%;
+  }
+  .card-img {
+    height: 250px;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+}
